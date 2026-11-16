@@ -1,0 +1,20 @@
+# Carpetas de compilacion
+build/
+cmake-build-*/
+
+# Archivos generados
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.a
+*.lib
+
+# Configuracion local de Qt Creator
+*.user
+*.user.*
+
+# Archivos temporales
+.DS_Store
+Thumbs.db
