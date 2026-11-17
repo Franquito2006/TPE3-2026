@@ -8,12 +8,10 @@ CONFIG += c++17 -Wa,-mbig-obj
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp \
-    qcustomplot.cpp
+    mainwindow.cpp
 
 HEADERS += \
-    mainwindow.h \
-    qcustomplot.h
+    mainwindow.h
 
 FORMS += \
     mainwindow.ui
@@ -22,3 +20,8 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+LIBS += -L"C:\qcp_lib" -l:qcustomplotd2.dll
+INCLUDEPATH += "C:\qcp_lib"
+LIBS += -L"C:\muparser_lib" -l:MuParserCreationDLL_2024.dll
+INCLUDEPATH += "C:\muparser_lib"
